@@ -66,10 +66,11 @@
       );
     }
 
-    const MainCard = () => {
+    const MainCard = (props) => {
+      console.log(props);
       return (
         <div class="main-card">
-          <img src="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react" alt="고양이" width="400" />
+          <img src={props.img} alt={props.alt} width={props.width} />
           <button>🤍</button>
         </div>
       );
@@ -81,18 +82,18 @@
       );
     }
 
-    const formTag = (
+    const FormTag = () => (
       <form>
         <input type="text" name="name" placeholder="영어 대사를 입력해주세요" />
         <button type="submit">생성</button>
       </form>
-    )
+    );
 
     const app = (
       <div>
         <Title>1번째 고양이 가라사애</Title>
-        {formTag}
-        <MainCard />
+        <FormTag />
+        <MainCard img="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react" alt="고양이" width="400" />
         <Favorites />
       </div>
     )
