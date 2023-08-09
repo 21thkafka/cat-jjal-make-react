@@ -25,10 +25,6 @@
     flex-wrap: wrap;
     gap: 15px;
   }
-
-  .favorites img {
-    width: 150px;
-  }
 </style>
 
 <body>
@@ -44,14 +40,14 @@
     function CatItem(props) {
       return (
         <li>
-          <img src={props.img} />
+          <img src={props.img} style={{ width: "150px" }} />
         </li>
       );
     }
 
 
     const favorites = (
-      <ul class="favorites">
+      <ul className="favorites">
         <CatItem img="https://cataas.com/cat/BxqL2EjFmtxDkAm2/says/inflearn" title="cat1" />
         <CatItem img="https://cataas.com/cat/18MD6byVC1yKGpXp/says/JavaScript" />
       </ul>
@@ -59,7 +55,7 @@
 
     function Favorites() {
       return (
-        <ul class="favorites">
+        <ul className="favorites">
           <CatItem img="https://cataas.com/cat/BxqL2EjFmtxDkAm2/says/inflearn" title="cat1" />
           <CatItem img="https://cataas.com/cat/18MD6byVC1yKGpXp/says/JavaScript" />
         </ul>
@@ -69,7 +65,7 @@
     const MainCard = (props) => {
       console.log(props);
       return (
-        <div class="main-card">
+        <div className="main-card">
           <img src={props.img} alt={props.alt} width={props.width} />
           <button>🤍</button>
         </div>
